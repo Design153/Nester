@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #2d3748;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F97316;
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cta-btn {
+    background: linear-gradient(45deg, #F97316, #fbbf24);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.cta-btn:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.6);
+}
+
+/* Dropdown */
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #2d3748;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background: #F97316;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+    color: white;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    animation: fadeInUp 1s ease;
+}
+
+#hero p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero-btns {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(45deg, #F97316, #fbbf24);
+    color: white;
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+}
+
+.secondary-btn {
+    background: white;
+    color: #1E3A8A;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: width 0.4s ease;
+}
+
+.search-bar:focus {
+    width: 70%;
+    outline: none;
+}
+
+/* Services Section */
+#services {
+    padding: 80px 0;
+    text-align: center;
+    background: #fff;
+}
+
+#services h2, #products h2, #laser-engraving h2, #about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#services h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #F97316;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg);
+    transition: all 0.4s ease;
+}
+
+.service-box:hover {
+    transform: perspective(1000px) rotateX(5deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.3);
+}
+
+/* Products Section */
+#products {
+    padding: 80px 0;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.product-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.4s ease;
+}
+
+.product-box:hover {
+    transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 58, 138, 0.3);
+}
+
+/* Laser Engraving Section */
+#laser-engraving {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.laser-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f7fa;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: all 0.4s ease;
+}
+
+.laser-content:hover {
+    transform: perspective(1000px) rotateX(3deg);
+}
+
+.laser-text {
+    flex: 1;
+    text-align: left;
+}
+
+.laser-text ul {
+    list-style: disc;
+    margin: 20px 0 20px 40px;
+}
+
+.laser-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Updated to 3 columns */
+    gap: 15px;
+}
+
+.image-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.4s ease;
+}
+
+.image-card:hover {
+    transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* About Us Section */
+#about {
+    padding: 80px 0;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    color: white;
+    padding: 50px 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #F97316;
+}
+
+.newsletter {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
